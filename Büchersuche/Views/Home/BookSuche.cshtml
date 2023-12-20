@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Buch Suche";
+}
+<h1>Buch Suche</h1>
+<form asp-controller="Home" asp-action="BookSuche" data-ajax="true" data-ajax-update="#allebücher">
+
+    <input type="text" name="buchname" />
+
+    <input type="submit" value="Suchen" />
+
+</form>
+
+<div id="allebücher"></div>
+
+<br />
+<br />

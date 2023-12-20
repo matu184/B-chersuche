@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Book>
+
+
+<table>
+    <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Category</th>
+    </tr>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.Isbn</td>
+            <td>@book.Title</td>
+            <td>@book.Year.Year</td>
+            <td>@book.Category.CategoryName</td>
+        </tr>
+    }
+
+</table>

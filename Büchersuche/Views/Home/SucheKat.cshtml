@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Buch Suche";
+}
+<h1>Buch Suche nach Kategorie</h1>
+
+<form asp-controller="Home" asp-action="BookSucheKat" data-ajax="true" data-ajax-update="#allebücher">
+
+    <select name="katid">
+        @foreach (var item in Model)
+        {
+            <option value="@item.CategoryId">@item.CategoryName</option>
+        }
+        </select>
+
+    <input type="submit" value="Suchen" />
+
+</form>
+
+<div id="allebücher"></div>
+
+<br />
+<br />
